@@ -1,38 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: #dee2e7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background: none;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 600px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+._image img {
+  width: 150px;
+}
+
+._description {
   display: flex;
   flex-direction: column;
+}
+
+._price {
+  background-color: #0066cc;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  border-radius: 20px;
+  font-size: .9rem;
 }
 
-.App-link {
-  color: #61dafb;
+.category-title {
+  margin-bottom: 0;
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+._colors button {
+  border-radius: 20px;
+  padding: 6px 16px;
+}
+
+._colors button:not(:first-child),
+._sizes button:not(:first-child) {
+  margin-left: 8px;
+}
+
+._sizes button {
+  border-radius: 18px;
+  padding: 6px 16px;
+}
+
+button {
+  text-align: center;
+  color: #000;
+  background: #dee2e7;
+}
+
+button.active {
+  border: 2px solid #0066cc;
 }
